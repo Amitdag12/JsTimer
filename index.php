@@ -28,9 +28,9 @@
         expected = Date.now() + interval;
     }
 
-    function stopTimer() {
-        stop = true;
-        clearTimeout(timer);
+    function startTimer() {
+        stop = false;
+        timer = setTimeout(step, interval);
         seconds = 0;
         expected = Date.now() + interval;
     }
