@@ -20,6 +20,7 @@
     var expected = Date.now() + interval;
     var seconds = 0;
     var timer;
+    var stop = false;
 
     function startTimer() {
         timer = setTimeout(step, interval);
@@ -28,6 +29,7 @@
     }
 
     function stopTimer() {
+        stop = true;
         clearTimeout(timer);
         seconds = 0;
         expected = Date.now() + interval;
@@ -57,7 +59,10 @@
             PlayTwoBeep();
         }
         expected += interval;
-        setTimeout(step, Math.max(0, interval - dt)); // take into account drift
+        if (!stop) {
+            setTimeout(step, Math.max(0, interval - dt)); // take into account drift
+        }
+
     }
 
     function ReturnTime() {
