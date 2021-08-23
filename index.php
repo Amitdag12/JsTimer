@@ -11,8 +11,8 @@
     <h1 id="timer">
 
     </h1>
-    <audio src="beep-01a.wav" autostart="false" width="0" height="0" id="sound1" enablejavascript="true">
-        <audio src="double-beep.wav" autostart="false" width="0" height="0" id="sound2" enablejavascript="true">
+    <audio src="https://psyc-timer.herokuapp.com/beep-01a.wav" autostart="false" width="0" height="0" id="sound1" enablejavascript="true">
+        <audio src="https://psyc-timer.herokuapp.com/double-beep.wav" autostart="false" width="0" height="0" id="sound2" enablejavascript="true">
 
 </body>
 <script>
